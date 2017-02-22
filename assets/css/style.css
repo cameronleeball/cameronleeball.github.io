@@ -1,0 +1,346 @@
+
+
+/* instructing browser to include padding and border in the box dimensions */
+* {
+	box-sizing: border-box;
+}
+
+/*setting global font size/type */
+.page {
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+
+}
+/*defining backgound image for page*/
+.backgroundImage {
+	position: fixed;
+	background: url("../images/tweed_@2X.png");
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	z-index: -1;
+}
+
+h1 {
+	font-size: 75px;
+}
+
+h2 {
+	font-size: 30px;
+}
+
+#home {
+	position: fixed;
+	float: left;
+	top: 0;
+	left: 100px;
+	display: inline-block;
+	color: white;
+	text-align: center;
+	height: 78px;
+	padding: 30px 25px;
+	text-decoration: none;
+	z-index: 1;
+}
+
+#home:hover {
+	background-color: rgba(255,0,0,.25); 
+	box-shadow: 5px 5px 5px rgba(0,0,0,.5);
+	border-radius: 5px;
+	transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+
+#menubar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 78px;
+	background-color: rgba(51,51,51,.75);
+	box-shadow: 0px 5px 5px rgba(153, 26, 26,.75);
+	font-size: 25px;
+}
+
+#menubar ol {
+	list-style-type: none;
+	position: fixed;
+	display: inline-block;
+	top: 0;
+	right: 100px;
+	margin: 0;
+	padding: 0;
+	z-index: 1;
+}
+
+#menubar li {
+	float: left;
+	right: 5px;
+	z-index: 1;
+}
+
+#menubar li a,.dropBut {
+	display: inline-block;
+	color: white;
+	text-align: center;
+	height: 78px;
+	padding: 30px 24px;
+	text-decoration: none;
+}
+
+#menubar li a:hover, .portfolioDropdown .dropBut:hover {
+	background-color: rgba(255,0,0,.25); 
+	box-shadow: 5px 5px 5px rgba(0,0,0,.5);
+	border-radius: 5px;
+	transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+#menubar li,.portfolioDropdown:hover {
+	display: inline-block;
+	transition: box-shadow 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.dropdownContent {
+	display: none;
+	position: relative;
+	background-color: rgba(51,51,51, 0);
+	min-width: 100px;
+	z-index: 2;
+	/*	transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);*/
+}
+
+.dropdownContent a {
+	color: black;
+	padding: 30px 25px;
+	text-decoration: none;
+	display: block;
+	text-align: left;
+	transition: 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.dropdownContent a:hover {
+	display: inline-block;
+	background-color: rgba(255,0,0,.25);
+	box-shadow: 5px 5px 5px rgba(0,0,0,.5);
+	border-radius: 5px;
+}
+
+.portfolioDropdown:hover .dropdownContent a {
+	display: inline-block;
+	box-shadow: 5px 5px 5px rgba(0,0,0,.5);
+}
+
+#contentWindow {
+	position: fixed;
+	top: 0;
+	left: 100px;
+	right: 100px;
+	bottom: 0;
+	height: 65%;
+	width: auto;
+	min-height: 600px;
+	min-width: 800px;
+	margin-top: 125px;
+	margin-bottom: 125px;
+	background-image: url("../images/debut_dark_@2X.png");
+	border-radius: 10px;
+	box-shadow: 15px 15px 5px rgba(0,0,0,0.5);
+	z-index: 1;
+}
+
+#primary {
+	position: relative;
+	float: left;
+	top: 75px;
+	left: 75px;
+	right: 0;
+	bottom: 0;
+	width: 50%;
+	height: 450px;
+	min-height: 200px;
+	box-shadow: 10px 10px 5px rgba(0,0,0,0.5);
+	border-radius: 5px;
+	background-image: url("../images/brushed_@2X.png");
+	z-index: 2;
+	transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+}
+
+#primary h1 {
+	position: relative;
+	clear: both;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	color: rgb(153, 26, 26);
+	background: none;
+	margin: 0px;
+	padding-top: 20px;
+	padding-left: 20px;
+	height: 100px;
+	width: 100%;
+	border-bottom: 10px solid grey;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	z-index: 2;
+}
+
+#primary .content {
+	position: relative;
+	clear: both;
+	overflow: scroll;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 75%;
+	min-height: inherit;
+	border-radius: 5px;
+	padding: 10px;
+	color: grey;
+}
+
+#primary:hover {
+	-webkit-transform: scale(1.05, 1.05);
+	transform: scale(1.05, 1.05);
+}
+
+#primary .contactForm {
+	position: relative;
+	clear: both;
+	overflow: scroll;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 75%;
+	min-height: inherit;
+	border-radius: 5px;
+	padding: 10px;
+	color: grey;
+}
+
+#contactForm ul {
+	list-style-type: none; 
+	clear: both;
+}
+
+#social {
+	position: relative;
+	display: inline-block;
+	float: right;
+	top: 75px;
+	right: 75px;
+	bottom: 0;
+	padding: 0;
+	width: 300px;
+	height: 300px;
+	border-radius: 5px;
+	box-shadow: 10px 10px 5px rgba(0,0,0,0.5);
+	background-image: url("../images/brushed_@2X.png");
+	z-index: 1;
+}
+
+#social h2 {
+	position: relative;
+	color: rgb(153, 26, 26);
+	background: none;
+	margin: 0;
+	padding-top: 10px;
+	padding-left: 10px;
+	width: 100%;
+	height: 50px;
+	border-bottom: 10px solid grey;
+	z-index: 1;
+}
+
+#thumbsBox {
+	position: relative;
+	display: inline-block;
+	align-content: center;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;  
+	width: 300px;
+	height: auto;
+	border-radius: 5px;
+	margin-right: 75px;
+	padding: 0
+	background-image: url("../images/brushed_@2X.png");
+}
+
+ul.thumbs {
+	position: relative;
+	display: inline-block;
+	align-items: center;
+	clear: both;
+	list-style-type: none;
+	padding-top: 10px;
+	margin: 0;
+	border: 0;
+	height: 100%;
+}
+
+#social li {
+	display: inline-block;
+}
+
+#social .thumbs img {
+	margin: 15px;
+	border: 1px solid grey;
+	border-radius: 4px;
+	padding: 5px;
+	width: 75px;
+	height: 75px;
+	-webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+	-o-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+	box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+	transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+#social .thumbs img:hover {
+	-webkit-box-shadow: 5px 5px 5px rgba(153, 26, 26, 0.5);
+	-moz-box-shadow: 5px 5px 5px rgba(153, 26, 26, 0.5);
+	-o-box-shadow: 5px 5px 5px rgba(153, 26, 26, 0.5);
+	box-shadow: 5px 5px 5px rgba(153, 26, 26, 0.5);
+	-webkit-transform: scale(1.25, 1.25);
+	transform: scale(1.25, 1.25);
+}
+
+
+.footer {
+	position: fixed;
+	bottom:0;
+	left: 0;
+	right: 0;
+	height: 75px;
+	z-index: 0;
+	border-top: 10px solid rgba(153,26,26,1);
+}
+
+#footerbg {
+	position: relative;
+	bottom: 0;
+	left: 0;
+	right: 0; 
+	background-image: url("../images/brushed_@2X.png");
+	height: 75px;
+	z-index: 1;
+}
+
+.footer p {
+	position: fixed;
+	bottom: 15px;
+	left: 0;
+	right: 0;
+	background: 0;
+	text-align: center;
+	background: none;
+	z-index: 2;
+	color: rgba(153,26,26,.50);
+}
