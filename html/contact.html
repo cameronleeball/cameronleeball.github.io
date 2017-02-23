@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<!--Head with link to css--> 
+<head>
+	<!--relatve link to css.style within portfolo's assets folder-->
+	<link rel="stylesheet" type="text/css" href="../assets/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+	<!-- 	<script type="text/javascript" src="javascript.js" ></script> -->
+	<meta charset="UTF-8">
+	<!--page title-->
+	<title>Contact Cameron</title>
+</head>
+
+<!--define div for entire page-->
+<div class="page">
+	<div class="backgroundImage"></div>
+	
+	<body>
+		<!--Fixed Width Menu Bar for Home Tab and navigation buttons-->
+		<div id="menubar">
+			<div id="menubarbg"></div>
+			<!--always returns to index-->
+			<a id="home" href="index.html">Cameron Lee Ball</a>
+			<ol>
+				<!--link to about.html-->
+				<li><a id="about" href="about.html">About</a></li>
+				<!--link to portfolio.html-->
+				<li class="portfolioDropdown">
+					<!-- creates a hidden dropdown for portfolio sub-genres -->
+					<a href="portfolio.html" class="dropBut">Portfolio</a>
+					<div class="dropdownContent">
+						<a href="#">Sites</a>
+						<a href="#">Apps</a>
+					</div>
+				</li>
+				<!--link to contact.html-->
+				<li><a id="contact" href="contact.html">Contact</a></li>
+			</ol>
+		</div>
+
+		<!--new div for content display window-->
+		<div id="contentWindow">
+			<!--larger box-->
+			<div id="primary">
+				<!--page name/title-->
+				<h1>Contact</h1>
+				<!--copy-->
+				<div class="content">
+					<form id="contactForm" action="" method="post" name="contact_form">
+						<ul>
+							<li>
+								<span class="required">* Denotes Required Field</span>
+							</li>
+							<li>
+								<label for="name">Name:</label>
+								<input type="text" name="name" placeholder="Jeffery Lebowski" />
+							</li>
+							<li>
+								<label for="email">Email:</label>
+								<input type="email" name="email" placeholder="walter@sobchek-security.com" />
+							</li>
+							<li>
+								<label for="name">Website:</label>
+								<input type="url" name="website" placeholder="gutterballs.com" />
+							</li>
+							<li>
+								<label for="message">Message:</label>
+								<textarea name="message" cols="40" rows="6" placeholder="You want a toe? I can get you a toe, believe me. There are ways, Dude. You don't wanna know about it, believe me." ></textarea>
+							</li>
+							<li>
+								<button class="submit" type="submit">Submit</button>
+							</li>
+						</ul>
+					</form>
+				</div>
+			</div>
+
+			<!--smaller box for social media buttons-->
+			<div id="social">
+				<!--'Connect' header-->
+				<h2>Connect With Me</h2>
+				<div id="thumbsBox">
+					<ul class="thumbs">
+						<!--'LinkedIn' button-->
+						<li><a href="https://www.linkedin.com/in/cameronleeball" id="linkedin" target="_blank">
+							<img src="../assets/images/linkedIn.png" alt ="linkedIn"></a>
+						</li>
+						<!--'GitHub' button-->
+						<li><a href="https://github.com/cameronleeball" id="github" target="_blank">
+							<img src="../assets/images/GitHub.png" alt="GitHub">
+						</a>
+					</li>
+					<br>
+					<!--'StackOverflow' button-->
+					<li><a href="http://stackoverflow.com/users/7520557/cameron-ball" id="stackoverflow" target="_blank"> 
+						<img src="../assets/images/stackoverflow.png" alt="stackoverflow"></a>
+					</li>
+					<!--'email' button-->
+					<li><a href="mailto:cameronleeball@gmail.com" id="email"> 
+						<img src="../assets/images/mail.png" alt="mail"></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<div id="footerbg"></div>
+		<p>
+			© Copyright Cameron Lee Ball <br>
+			2017
+		</p>
+	</div>
+</body>
+</div>
+</html>
